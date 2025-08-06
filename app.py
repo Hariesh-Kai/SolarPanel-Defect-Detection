@@ -25,7 +25,7 @@ if mode == "Classification":
     # Load once
     @st.cache_resource
     def load_classifier():
-        model = tf.keras.models.load_model("E:\kavin engineerng\models\MobileNetV2_solar_model.h5", compile=False)
+        model = tf.keras.models.load_model("models/MobileNetV2_solar_model.h5", compile=False)
         model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
         return model
     clf = load_classifier()
